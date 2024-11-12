@@ -89,7 +89,7 @@ $ terraform destroy
 
 ## Ch.2 建起來很酷，但剛剛發生什麼？
 1. 剛剛我們建立了 main.tf。**.tf** 是 terraform 專用檔名，在你執行 terraform 指令時，當前路徑的 .tf 都會被抓到
-2. 我們在 main.tf 放了一個 resource，他的架構是 resoure + 你的 Terraform Provider 定義的名稱( TF Provider 下個章節解釋)。再加上自定義的名稱，我們這邊是 "test"。{}裡面的是有關於這個 resource 要如何被設定的參數。(下個章節解釋)
+2. 我們在 main.tf 放了一個 resource，他的架構是 resource + 你的 Terraform Provider 定義的名稱( TF Provider 下個章節解釋)。再加上自定義的名稱，我們這邊是 "test"。{}裡面的是有關於這個 resource 要如何被設定的參數。(下個章節解釋)
     ```
     resource "google_storage_bucket" "test" {
       name          = "<Your Name>-123456789"
