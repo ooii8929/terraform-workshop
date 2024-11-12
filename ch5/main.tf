@@ -1,13 +1,11 @@
 provider "google" {
-  project = "shopeetwbi"
-  region  = "asia-east1"
-
+  project = "< Your Project Name >"
+  region  = "< Your Region >"
 }
 
-
 resource "google_storage_bucket" "bucket" {
-  name     = "alvin-123456789"
-  location = "ASIA-EAST1"
+  name     = "< Your Name >-123456789"
+  location = "< Your Region >"
 }
 
 resource "null_resource" "zip" {

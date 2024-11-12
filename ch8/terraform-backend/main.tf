@@ -1,19 +1,18 @@
 variable "project_name" {
   description = "The name of the project"
   type        = string
-  default     = "das-llm-developer-infra"
+  default     = "< Custom Project Name >"
 }
 
 # provider.tf
 provider "google" {
-  project = "shopeetwbi"
-  region  = "asia-east1"
+  project = "< Your Project Name >"
+  region  = "< Your Region >"
 }
 
-# storage.tf
 resource "google_storage_bucket" "terraform_state" {
   name          = "${var.project_name}-tf-state"
-  location      = "asia-east1"
+  location      = "< Your Region >"
   force_destroy = false
 
   versioning {

@@ -1,6 +1,6 @@
 variable "project" {
   description = "The GCP project to deploy resources"
-  default     = "shopeetwbi"
+  default     = "< Your Project Name >"
 }
 
 variable "environment" {

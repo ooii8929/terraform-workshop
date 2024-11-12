@@ -4,3 +4,4 @@
 *.lock.hcl
 *.tfstate.d/
 *.zip
+*.plan
