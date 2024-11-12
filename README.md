@@ -13,8 +13,14 @@ on darwin_arm64
 ```
 若是 mac，應該可以使用 brew install terraform
 ### 2. 確認有在本地擁有 gcloud 使用權限
+- Gcloud 安裝(https://cloud.google.com/sdk/docs/install)
+- Gcloud Local Credential 設定(https://cloud.google.com/docs/authentication/provide-credentials-adc#how-to)
 ```
-$ gcloud auth login
+$ gcloud auth application-default login
+# 顯示已認證的帳號清單
+$ gcloud auth list
+# 確認應用程式預設認證
+$ gcloud auth application-default print-access-token
 ```
 
 ## Ch.1 Terraform 的好，動手看看就知道
@@ -176,7 +182,7 @@ $ terraform destroy
     terraform apply -file terraform.tfstate.backup
     ```
 
-## Ch.1 - Ch.3 你已經學會
+## Ch.1 - Ch.4 你已經學會
 1. 定義自己要對雲端操作的行為
 2. 如何根據行為查 terraform 對應 resource
 3. 如何將 resource 寫進 .tf file

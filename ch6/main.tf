@@ -43,9 +43,9 @@ resource "google_secret_manager_secret" "secret-basic" {
 }
 
 resource "google_cloudfunctions_function" "function" {
-  name        = "function-test"
+  name        = "alvin-function-test"
   description = "Python HTTP Function"
-  runtime     = "python312" # 使用 Python 3.12
+  runtime     = "python312"
 
   # 指定使用新建立的 service account
   service_account_email = google_service_account.function_sa.email
@@ -78,7 +78,7 @@ resource "google_cloudfunctions_function_iam_member" "invoker" {
 
 # 創建新的 service account
 resource "google_service_account" "function_sa" {
-  account_id   = "cloud-function-sa"
+  account_id   = "alvin-cloud-function-sa"
   display_name = "Cloud Functions Service Account"
   description  = "Service account for Cloud Functions with Secret Manager access"
 }

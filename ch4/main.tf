@@ -1,7 +1,6 @@
 provider "google" {
   project = "shopeetwbi"
   region  = "asia-east1"
-
 }
 
 
@@ -35,7 +34,7 @@ resource "google_storage_bucket_object" "archive" {
 
 
 resource "google_cloudfunctions_function" "function" {
-  name        = "function-test"
+  name        = "alvin-function-test"
   description = "Python HTTP Function"
   runtime     = "python312" # 使用 Python 3.12
 
